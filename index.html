@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout's Construction LLC</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  font-size: 17px;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("1769031639608.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(223, 212, 180, 0.9);
+  z-index: -1;
+}
+
+main { flex: 1; padding: 0 20px; }
+
+header {
+  background: url('RedefinedWorksColor2.png') center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+section {
+  padding: 3rem 0;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2, h3 { text-align: center; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; margin-bottom: 1.5rem; }
+
+/* ABOUT / BIOS */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* MASCOT */
+#mascot img {
+  max-width: 80%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center 30%;
+  margin: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card img,
+.gallery-card video {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+}
+
+.gallery-card:hover img,
+.gallery-card:hover video {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.gallery-text {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #E4D9B9;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.zoom-out {
+  object-fit: contain !important;
+  background: transparent !important;
+  aspect-ratio: auto;
+}
+
+/* PARTNERS */
+.partner-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.partner-text {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #E4D9B9;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background: url('RedefinedWorksColor2.png') center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+footer h2, footer p { margin: 0; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  #mascot img { max-width: 100%; max-height: none; object-fit: contain; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Scout's Construction LLC</h1>
+  <p>Built with care. Built to last.</p>
+</header>
+
+<main>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <div class="about">
+    <div>
+      <p>We are a family-owned, family-run general contracting and design business with a passion for quality craftsmanship and honest work.</p>
+      <p>Over the years we have evolved from sub-contracting for other companies to obtaining our own Minnesota general contractors license <strong>#BC809598</strong>.</p>
+      <p>We specialize in design and builds of all kinds — kitchens, bathrooms, siding, windows, paint, custom heirloom furnishings, and even art./p>
+	  <p>While most work is done in-house, we also manage our invaluable network of sub-contractors for trades outside our expertise. </p>
+      <p><strong>Please pardon our dust — this website is currently under construction. Please contact us for a more detailed portfolio of our work.</strong></p>
+    </div>
+    <img src="ArtemioLevel.jpg">
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="bios">
+  <h2>Meet the Team</h2>
+
+  <div class="about">
+    <div>
+      <h3>Diego — Owner & Lead Builder</h3>
+      <p>Diego is the owner and lead builder of Scout’s Construction. He started his construction career in 2017 working part-time after school at his dad’s design-and-build firm.
+	  He later worked in retail during high school where he learned the importance of customer service and reliability. After returning to work alongside his 
+	  dad’s crew following some travelling abroad, Diego gained hands-on experience that inspired him to start his own company. He values hard work, quality craftsmanship, 
+	  and genuine client relationships — principles passed down from his dad that remain at the core of Scout’s Construction today. In his free time, his passions include 
+	  listening to music, friends, and serving at church.</p> 
+    </div>
+    <img src="DiegoLego.jpg">
+  </div>
+
+  <div class="about" style="margin-top:3rem;">
+    <img src="ChristianCigar.jpg">
+    <div>
+      <h3>Christian — Operations Manager, Master Carpenter and Lead Designer</h3>
+      <p>Christian brings a strong design background and a craftsman’s eye and detailed execution to Scout’s Construction. With an educational background in architecture and art.
+	  Christian worked at an architecture firm in St. Paul for 4 years where he realzied he much prefered hands-on labor than a desk job. He decided to establish his own design and build
+	  company. Where he was able to hone in his skills for his passion in finish carpentry, cabinet making and furniture deisgn-and-build.
+	  He combines technical knowledge with creative vision. He specializes in fine woodwork — custom tables, cabinetry, and detailed finishes that elevate every space.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MASCOT -->
+<section id="mascot">
+  <h2>Our Mascot</h2>
+  <div class="about">
+    <div>
+      <h3>Scout 🐾</h3>
+      <p>Meet Scout — our four-legged foreman and job-site supervisor. He is our 11 year old lab. 
+He takes his inspection duties seriously, loves greeting new clients, and never misses a chance to test out freshly built decks. Whether he’s overseeing a project from the shop or 
+tagging along on-site, Scout brings energy, loyalty, and a keen eye for quality. At Scout’s Construction, every project gets the paw-stamp of approval.</p>
+    </div>
+    <img src="Scout.JPG">
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="gallery">
+  <h2>Our Work</h2>
+
+  <h3>Woodwork</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="Shelf.JPG" class="zoom-out">
+      <div class="gallery-text">Custom Furnishings</div>
+    </div>
+    <div class="gallery-card">
+      <img src="Table1.JPG">
+      <div class="gallery-text">Epoxy River Tables</div>
+    </div>
+    <div class="gallery-card">
+      <img src="IMG_5281.PNG">
+      <div class="gallery-text">Live Edge Countertops</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:3rem;">Kitchens</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="IMG_0010.JPG">
+      <div class="gallery-text">Custom Walnut Countertop</div>
+    </div>
+    <div class="gallery-card">
+      <video autoplay muted loop playsinline>
+        <source src="AdrianKitchen.mp4">
+      </video>
+      <div class="gallery-text">Galley Kitchen</div>
+    </div>
+    <div class="gallery-card">
+      <video autoplay muted loop playsinline>
+        <source src="YeseniaKitchen.MOV">
+      </video>
+      <div class="gallery-text">Open Concept Kitchen</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:3rem;">Bathrooms</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="IMG_0002.JPG">
+      <div class="gallery-text">Custom Live Edge Vanity</div>
+    </div>
+    <div class="gallery-card">
+      <img src="IMG_0922.JPEG">
+      <div class="gallery-text">Tile & Fixtures</div>
+    </div>
+    <div class="gallery-card">
+      <video autoplay muted loop playsinline>
+        <source src="YeseniaBathroom.mp4">
+      </video>
+      <div class="gallery-text">Bathroom Remodel</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTERIORS -->
+<section id="exteriors">
+  <h3>Exteriors</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="ToddDeck1.JPG">
+      <div class="gallery-text">Hardscapes</div>
+    </div>
+    <div class="gallery-card">
+      <img src="Deck1.JPG">
+      <div class="gallery-text">Decks</div>
+    </div>
+    <div class="gallery-card">
+      <img src="HeidiSiding.JPG">
+      <div class="gallery-text">Siding</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners">
+  <h2>Our Vendor Partners</h2>
+  <div class="gallery">
+    <div class="partner-card">
+      <img src="placeholder.jpg">
+      <div class="partner-text">Partner Name</div>
+    </div>
+    <div class="partner-card">
+      <img src="placeholder.jpg">
+      <div class="partner-text">Partner Name</div>
+    </div>
+    <div class="partner-card">
+      <img src="placeholder.jpg">
+      <div class="partner-text">Partner Name</div>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h2>Ready to start your project?</h2>
+      <p>Let’s talk about your ideas.</p>
+    </div>
+    <div>
+      <p><strong>Phone:</strong> </br>(763) 772-6741 - Diego </br> (612) 791-9398 - Christian</p>
+	 
+      <p><strong>Email:</strong> </br> Diego@ScoutsConstructionLLC.com </br> Christian@ScoutsConstructionLLC.com </p>
+	 
+      <p>Lic.# BC809598</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
