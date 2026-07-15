@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout's Construction LLC</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  font-size: 17px;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("1769031639608.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(223, 212, 180, 0.9);
+  z-index: -1;
+}
+
+main { flex: 1; padding: 0 20px; }
+
+header {
+  background: url('RedefinedWorksColor2.png') center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+section {
+  padding: 3rem 0;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2, h3 { text-align: center; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; margin-bottom: 1.5rem; }
+
+/* ABOUT / BIOS */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* MASCOT */
+#mascot img {
+  max-width: 80%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center 30%;
+  margin: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* PARTNER GALLERY */
+.partner-gallery {
+  display: grid;
+  grid-template-columns: 300px;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery-card img,
+.gallery-card video {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+}
+
+.gallery-card:hover img,
+.gallery-card:hover video {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.gallery-text {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #E4D9B9;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.zoom-out {
+  object-fit: contain !important;
+  background: transparent !important;
+  aspect-ratio: auto;
+}
+
+/* PARTNERS */
+.partner-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.partner-text {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #E4D9B9;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align:center;
+}
+
+/* FOOTER */
+footer {
+  background: url('RedefinedWorksColor2.png') center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+footer h2, footer p { margin: 0; }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  #mascot img { max-width: 100%; max-height: none; object-fit: contain; }
+}
+.social-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer-inner > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-inner > div:last-child .social-section {
+  margin-top: 2rem;
+}
+
+.social-section h3 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.social-section h2 {
+  margin-bottom: 1.75rem;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 2rem;
+}
+
+.social-icons img {
+  width: 55px;
+  height: 55px;
+  transition: transform .25s ease;
+}
+
+.nextdoor-icon {
+  width: 66px;
+  height: 66px;
+}
+
+.social-icons img:hover {
+  transform: scale(1.12);
+}
+
+.award {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.award img {
+  width: 180px;
+  max-width: 90%;
+}
+
+.copyright {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: .9rem;
+  opacity: .8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Scout's Construction LLC</h1>
+  <p>Built with care. Built to last.</p>
+</header>
+
+<main>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <div class="about">
+    <div>
+      <p>What started as a vision has grown into a licensed Minnesota general contracting company built around a simple mission: <br></br> <b>Helping homeowners, businesses, investors, 
+	  and property managers improve the value of their properties while making the construction process as straightforward as possible by having all of the work done in-house.</b> 
+	 <br></br> Eliminating the headaches of contractors that disappear after signing a contract, leaving the customer to deal with subcontractors that they don't even know.</p>
+	
+	  <p>Today, <b>Scout's Construction LLC </b>proudly specializes in:</p>
+<ul style="font-weight:bold;">
+	<li>Residential & Commercial Remodeling</li>
+	<li>Kitchens and Bathrooms</li>
+	<li>Basements</li>
+	<li>Roofing & Siding</li>
+	<li>Windows & Gutters</li>
+	<li>Property Improvements</li>
+	<li>Interior & Exterior Renovations</li>
+</ul>	 
+	 <p>One thing you'll notice about us is that we don't disappear after you sign a contract. We believe in working with and keeping our customers involved through every step of the project
+	  , from the first conversation, through the design process, to the final walkthrough</p>
+      <p>Whether you're remodeling your forever home, preparing a property for sale, renovating an investment property or improving your business, we'd love the opportunity to earn your trust.</p>
+	  <p>Thank you to everyone who has supported <b>Scout's Construction LLC</b> so far. We're just getting started, and we're excited to continue serving the Twin Cities community.  </p>
+      <p><strong>Please pardon our dust — this website is currently under construction. Please contact us for a more detailed portfolio of our work.</strong></p>
+    </div>
+    <img src="ArtemioLevel.jpg">
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="bios">
+  <h2>Meet the Team</h2>
+
+  <div class="about">
+    <div>
+      <h3>Diego — Owner & Lead Builder</h3>
+      <p>Diego is the owner and lead builder of Scout’s Construction. He started his construction career in 2017 working part-time after school at his dad’s design-and-build firm.
+	  He later worked in retail during high school, where he learned the importance of customer service and reliability. After returning to work alongside his 
+	  dad’s crew following some traveling abroad, Diego gained hands-on experience that inspired him to start his own company. He values hard work, quality craftsmanship, 
+	  and genuine client relationships — principles passed down from his dad that remain at the core of Scout’s Construction today. In his free time, his passions include 
+	  listening to music, spending time with friends, and serving at church.</p> 
+    </div>
+    <img src="DiegoLego.jpg">
+  </div>
+
+  <div class="about" style="margin-top:3rem;">
+    <img src="ChristianCigar.jpg">
+    <div>
+      <h3>Christian — Operations Manager, Master Carpenter and Lead Designer</h3>
+      <p>Christian brings a strong design background, a craftsman’s eye, and detailed execution to Scout’s Construction. With an educational background in architecture and art,
+	  Christian worked at an architecture firm in St. Paul for 4 years where he realized he much preferred hands-on labor than a desk job. He decided to establish his own design and build
+	  company, where he was able to hone his skills for his passion in finish carpentry, cabinet-making and furniture design-and-build.
+	  He combines technical knowledge with creative vision. He specializes in fine woodwork — custom tables, cabinetry, and detailed finishes that elevate every space.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MASCOT -->
+<section id="mascot">
+  <h2>Our Mascot</h2>
+  <div class="about">
+    <div>
+      <h3>Scout 🐾</h3>
+      <p>Meet Scout — our four-legged foreman and job-site supervisor. He is our 11-year-old Lab. 
+He takes his inspection duties seriously, loves greeting new clients, and never misses a chance to test out freshly built decks. Whether he’s overseeing a project from the shop or 
+tagging along on-site, Scout brings energy, loyalty, and a keen eye for quality. At Scout’s Construction, every project gets the paw-stamp of approval.</p>
+    </div>
+    <img src="Scout.JPG">
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="gallery">
+  <h2>Our Work</h2>
+
+  <h3>Woodwork</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="Shelf.JPG" class="zoom-out">
+      <div class="gallery-text">Custom Furnishings</div>
+    </div>
+    <div class="gallery-card">
+      <img src="Table1.JPG">
+      <div class="gallery-text">Epoxy River Tables</div>
+    </div>
+    <div class="gallery-card">
+      <img src="IMG_5281.PNG">
+      <div class="gallery-text">Live Edge Countertops</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:3rem;">Kitchens</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="IMG_0010.JPG">
+      <div class="gallery-text">Custom Walnut Countertop</div>
+    </div>
+    <div class="gallery-card">
+      <video autoplay muted loop playsinline>
+        <source src="AdrianKitchen.mp4">
+      </video>
+      <div class="gallery-text">Galley Kitchen</div>
+    </div>
+    <div class="gallery-card">
+      <video autoplay muted loop playsinline>
+        <source src="YeseniaKitchen.MOV">
+      </video>
+      <div class="gallery-text">Open Concept Kitchen</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:3rem;">Bathrooms</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="IMG_0002.JPG">
+      <div class="gallery-text">Custom Live Edge Vanity</div>
+    </div>
+    <div class="gallery-card">
+      <img src="IMG_0922.JPEG">
+      <div class="gallery-text">Tile & Fixtures</div>
+    </div>
+    <div class="gallery-card">
+      <video autoplay muted loop playsinline>
+        <source src="YeseniaBathroom.mp4">
+      </video>
+      <div class="gallery-text">Bathroom Remodel</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTERIORS -->
+<section id="exteriors">
+  <h3>Exteriors</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="Pergola.JPG">
+      <div class="gallery-text">Pergola</div>
+    </div>
+    <div class="gallery-card">
+      <img src="Tad.jpg">
+      <div class="gallery-text">Stucco Painting</div>
+    </div>
+    <div class="gallery-card">
+      <img src="HeidiSiding.JPG">
+      <div class="gallery-text">Siding</div>
+    </div>
+  </div>
+</section>
+
+<!-- Decks -->
+<section id="Decks">
+  <h3>Exteriors</h3>
+  <div class="gallery">
+    <div class="gallery-card">
+      <img src="ToddDeck1.JPG">
+      <div class="gallery-text">Hardscapes</div>
+    </div>
+    <div class="gallery-card">
+      <img src="Deck1.JPG">
+      <div class="gallery-text"> Platform Decks</div>
+    </div>
+    <div class="gallery-card">
+	<video autoplay muted loop playsinline>
+      <source src="MikeMollyDeck.mp4">
+	  </video>
+      <div class="gallery-text">Raised Decks</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners">
+  <h2>Our Vendor Partners</h2>
+  <div class="partner-gallery">
+    <div class="partner-card">
+	<a href="https://msha.ke/rouser_realtor" target="_blank" rel="noopener" >
+	<img src="Rouser Headshot.png">
+	</a>
+      <div class="partner-text">Aaron J. Rouser </br> REALTOR® | KW Realty Integrity Lakes</div>
+    </div>
+    
+</section>
+
+
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h2>Ready to start your project?</h2>
+      <p>Let’s talk about your ideas.</p>
+      <br>
+      <p><strong>Phone:</strong><br>(763) 772-6741 - Diego<br>(612) 791-9398 - Christian</p>
+
+      <p><strong>Email:</strong><br>Diego@ScoutsConstructionllc.com<br>Christian@ScoutsConstructionllc.com</p>
+
+      <p>Lic.# BC809598</p>
+    </div>
+
+    <div class="social-section">
+      <h2>Follow Scout's Construction</h2>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61587498937595" target="_blank">
+          <img src="facebook.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/scouts_construction_llc/?hl=en" target="_blank">
+          <img src="instagram.png" alt="Instagram">
+        </a>
+
+        <a href="https://nextdoor.com/pages/redefined-works-llc-plymouth-mn?utm_campaign=1784078592418&share_action_id=c574f5b0-2687-483a-b22c-36940d876412" target="_blank">
+          <img src="Nextdoor.png" class="nextdoor-icon" alt="Nextdoor">
+        </a>
+      </div>
+
+      <div class="award">
+        <img src="NeighborhoodFave2025.png" alt="2025 Nextdoor Neighborhood Fave">
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2026 Scout's Construction LLC
+  </div>
+</footer>
+
+</body>
+</html>
